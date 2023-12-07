@@ -1,0 +1,3 @@
+- new: weather maps, pollen forecast, UV hazard index
+- supports UV hazard index and precipitation on wearables with Gadgetbridge
+- numerous, further improvements

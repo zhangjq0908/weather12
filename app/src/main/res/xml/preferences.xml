@@ -1,0 +1,644 @@
+<!--
+ This file is part of TinyWeatherForecastGermany.
+
+ Copyright (c) 2020, 2021, 2022, 2023 Pawel Dube
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:title="@string/preference_category_display">
+
+        <ListPreference
+                android:key="PREF_theme"
+                android:title="@string/preference_theme_title"
+                android:summary="@string/preference_theme_summary"
+                android:entries="@array/theme_text"
+                android:entryValues="@array/theme_values"
+                android:defaultValue="FOLLOW_DEVICE"/>
+
+        <ListPreference
+                android:key="PREF_viewmodel"
+                android:title="@string/preference_viewmodel_title"
+                android:summary="@string/preference_viewmodel_summary"
+                android:entries="@array/viewmodel_text"
+                android:entryValues="@array/viewmodel_values"
+                android:defaultValue="SIMPLE"/>
+
+        <ListPreference
+                android:key="PREF_display_type"
+                android:title="@string/preference_displaytype_title"
+                android:summary="@string/preference_displaytype_summary"
+                android:entries="@array/display_type_text"
+                android:entryValues="@array/display_type_values"
+                android:defaultValue="3"/>
+
+        <PreferenceScreen
+                android:key="PREF_screen_display_extended"
+                android:title="@string/preference_screen_display_title"
+                android:summary="@string/preference_screen_display_summary">
+
+            <!--
+
+            <CheckBoxPreference
+                    android:key="PREF_display_bar"
+                    android:title="@string/preference_displayforecastbar_title"
+                    android:summary="@string/preference_displayforecastbar_summary"
+                    android:defaultValue="true"/>
+
+            <CheckBoxPreference
+                    android:key="PREF_display_simple_bar"
+                    android:title="@string/preference_displaysimplebar_title"
+                    android:summary="@string/preference_displaysimplebar_summary"
+                    android:defaultValue="false"/>
+
+            <CheckBoxPreference
+                    android:key="PREF_display_pressure"
+                    android:title="@string/preference_displaypressure_title"
+                    android:summary="@string/preference_displaypressure_summary"
+                    android:defaultValue="true"/>
+
+            <CheckBoxPreference
+                    android:key="PREF_display_visibility"
+                    android:title="@string/preference_displayvisibility_title"
+                    android:summary="@string/preference_displayvisibility_summary"
+                    android:defaultValue="true"/>
+
+            -->
+
+            <CheckBoxPreference
+                    android:key="PREF_display_sunrise"
+                    android:title="@string/preference_displaysunrise_title"
+                    android:summary="@string/preference_displaysunrise_summary"
+                    android:defaultValue="true"/>
+
+            <CheckBoxPreference
+                    android:key="PREF_display_end_of_day_bar"
+                    android:title="@string/preference_displayendofdaybar_title"
+                    android:summary="@string/preference_displayendofdaybar_summary"
+                    android:defaultValue="false"/>
+
+            <CheckBoxPreference
+                    android:key="PREF_display_gradient"
+                    android:title="@string/preference_display_gradient_title"
+                    android:summary="@string/preference_display_gradient_summary"
+                    android:defaultValue="false"/>
+
+        <PreferenceScreen
+                android:key="PREF_screen_display_overviewchart"
+                android:title="@string/preference_display_overviewchart_title"
+                android:summary="@string/preference_screen_overviewchart_summary">
+
+            <CheckBoxPreference
+                    android:key="PREF_display_overviewchart"
+                    android:title="@string/preference_display_overviewchart_title"
+                    android:summary="@string/preference_display_overviewchart_summary"
+                    android:defaultValue="false"/>
+
+            <de.kaffeemitkoffein.tinyweatherforecastgermany.NumberPickerPreference
+                    android:key="PREF_display_overviewchart_days"
+                    android:title="@string/preference_display_overviewchart_days_title"
+                    android:summary="@string/preference_display_overviewchart_days_summary"
+            />
+
+            <PreferenceCategory
+                    android:title="@string/preference_category_overviewchart_scale">
+
+                <CheckBoxPreference
+                        android:key="PREF_display_overviewchart_mmu"
+                        android:title="@string/preference_screen_overviewchart_usemm_title"
+                        android:summary="@string/preference_screen_overviewchart_usemm_summary"
+                        android:defaultValue="false"/>
+
+                <de.kaffeemitkoffein.tinyweatherforecastgermany.NumberPickerPreference
+                        android:key="PREF_display_overviewchart_min"
+                        android:title="@string/preference_screen_overviewchart_min_title"
+                        android:summary="@string/preference_screen_overviewchart_min_summary"
+                />
+
+                <de.kaffeemitkoffein.tinyweatherforecastgermany.NumberPickerPreference
+                        android:key="PREF_display_overviewchart_max"
+                        android:title="@string/preference_screen_overviewchart_max_title"
+                        android:summary="@string/preference_screen_overviewchart_max_summary"
+                />
+
+            </PreferenceCategory>
+
+        </PreferenceScreen>
+
+            <PreferenceScreen
+                    android:key="PREF_screen_map"
+                    android:title="@string/preference_screen_map_title"
+                    android:summary="@string/preference_screen_map_summary">
+
+                <CheckBoxPreference
+                        android:key="PREF_radar_show"
+                        android:title="@string/preference_display_show_radar_by_default_title"
+                        android:summary="@string/preference_display_show_radar_by_default_summary"
+                        android:defaultValue="true"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_adminmap_show"
+                        android:title="@string/preference_map_show_admin_by_default_title"
+                        android:summary="@string/preference_map_show_admin_by_default_summary"
+                        android:defaultValue="false"/>
+
+                <PreferenceCategory
+                        android:title="@string/preference_category_admin">
+
+                    <!--
+
+                    <CheckBoxPreference
+                            android:key="PREF_map_display_municipalities"
+                            android:title="@string/preference_map_display_municipalities_title"
+                            android:summary="@string/preference_map_display_municipalities_summary"
+                            android:defaultValue="false"/>
+
+                     -->
+
+                    <CheckBoxPreference
+                            android:key="PREF_map_display_counties"
+                            android:title="@string/preference_map_display_counties_title"
+                            android:summary="@string/preference_map_display_counties_summary"
+                            android:defaultValue="true"/>
+
+                    <CheckBoxPreference
+                            android:key="PREF_map_display_states"
+                            android:title="@string/preference_map_display_states_title"
+                            android:summary="@string/preference_map_display_states_summary"
+                            android:defaultValue="false"/>
+
+                    <CheckBoxPreference
+                            android:key="PREF_map_display_sea_areas"
+                            android:title="@string/preference_map_display_sea_title"
+                            android:summary="@string/preference_map_display_sea_summary"
+                            android:defaultValue="false"/>
+
+                    <CheckBoxPreference
+                            android:key="PREF_map_display_coast_areas"
+                            android:title="@string/preference_map_display_coast_title"
+                            android:summary="@string/preference_map_display_coast_summary"
+                            android:defaultValue="false"/>
+
+                </PreferenceCategory>
+
+
+            </PreferenceScreen>
+
+
+            <PreferenceScreen
+                    android:key="PREF_screen_display_wind"
+                    android:title="@string/preference_screen_wind_title"
+                    android:summary="@string/preference_screen_wind_summary">
+
+                <ListPreference
+                        android:key="PREF_display_wind_type"
+                        android:title="@string/preference_display_wind_type_title"
+                        android:summary="@string/preference_display_wind_type_summary"
+                        android:entries="@array/display_wind_type_text"
+                        android:entryValues="@array/display_wind_type_values"
+                        android:defaultValue="0"/>
+
+                <ListPreference
+                        android:key="PREF_display_wind_unit"
+                        android:title="@string/preference_display_wind_unit_title"
+                        android:summary="@string/preference_display_wind_unit_summary"
+                        android:entries="@array/display_wind_unit_text"
+                        android:entryValues="@array/display_wind_unit_values"
+                        android:defaultValue="0"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_display_wind_arc"
+                        android:title="@string/preference_display_wind_arc_title"
+                        android:summary="@string/preference_display_wind_arc_summary"
+                        android:defaultValue="false"/>
+
+                <ListPreference
+                        android:key="PREF_display_wind_arc_period"
+                        android:title="@string/preference_display_wind_arc_hours_title"
+                        android:summary="@string/preference_display_wind_arc_hours_summary"
+                        android:entries="@array/display_wind_arc_period_text"
+                        android:entryValues="@array/display_wind_arc_period_values"
+                        android:defaultValue="6"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_display_wind_in_radar"
+                        android:title="@string/preference_display_wind_in_radar_title"
+                        android:summary="@string/preference_display_wind_in_radar_summary"
+                        android:defaultValue="true"/>
+
+                <PreferenceCategory
+                        android:title="@string/chartwidget_description">
+
+                    <CheckBoxPreference
+                            android:key="PREF_wind_in_charts"
+                            android:title="@string/preference_display_wind_in_charts_title"
+                            android:summary="@string/preference_display_wind_in_charts_summary"
+                            android:defaultValue="false"/>
+
+                    <EditTextPreference
+                            android:key="PREF_wind_in_charts_max"
+                            android:title="@string/preference_display_wind_in_charts_max_title"
+                            android:summary="@string/preference_display_wind_in_charts_max_summary"
+                            android:inputType="number"
+                            android:dialogTitle="@string/preference_display_wind_in_charts_max_title"
+                            android:defaultValue="100"/>
+
+                </PreferenceCategory>
+
+            </PreferenceScreen>
+
+            <ListPreference
+                    android:key="PREF_display_distance_unit"
+                    android:title="@string/preference_display_distance_unit_title"
+                    android:summary="@string/preference_display_distance_unit_summary"
+                    android:entries="@array/display_distance_unit_text"
+                    android:entryValues="@array/display_distance_unit_values"
+                    android:defaultValue="0"/>
+
+            <PreferenceScreen
+                    android:key="PREF_screen_display_pollen"
+                    android:title="@string/preference_screen_pollen_title"
+                    android:summary="@string/preference_screen_pollen_summary">
+
+                <CheckBoxPreference
+                        android:key="PREF_pollen_ambrosia"
+                        android:title="@string/pollen_ambrosia"
+                        android:summary="@string/preference_screen_pollen_ambrosia_summary"
+                        android:defaultValue="true"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_pollen_beifuss"
+                        android:title="@string/pollen_mugwort"
+                        android:summary="@string/preference_screen_pollen_mugwort_summary"
+                        android:defaultValue="true"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_pollen_roggen"
+                        android:title="@string/pollen_rye"
+                        android:summary="@string/preference_screen_pollen_rye_summary"
+                        android:defaultValue="true"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_pollen_esche"
+                        android:title="@string/pollen_ash"
+                        android:summary="@string/preference_screen_pollen_ash_summary"
+                        android:defaultValue="true"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_pollen_birke"
+                        android:title="@string/pollen_birch"
+                        android:summary="@string/preference_screen_pollen_birch_summary"
+                        android:defaultValue="true"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_pollen_hasel"
+                        android:title="@string/pollen_hazel"
+                        android:summary="@string/preference_screen_pollen_hazel_summary"
+                        android:defaultValue="true"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_pollen_erle"
+                        android:title="@string/pollen_alder"
+                        android:summary="@string/preference_screen_pollen_alder_summary"
+                        android:defaultValue="true"/>
+
+                <CheckBoxPreference
+                        android:key="PREF_pollen_graeser"
+                        android:title="@string/pollen_grasses"
+                        android:summary="@string/preference_screen_pollen_grasses_summary"
+                        android:defaultValue="true"/>
+
+                <Preference
+                        android:key="PREF_pollen_hint"
+                        android:icon="?attr/ic_info_outline"
+                        android:summary="@string/preference_screen_pollen_hint_summary"/>
+
+            </PreferenceScreen>
+
+            <PreferenceScreen
+                    android:key="PREF_screen_uvhi"
+                    android:title="@string/preference_screen_uvhi_title"
+                    android:summary="@string/preference_screen_uvhi_summary">
+
+                <CheckBoxPreference
+                        android:key="PREF_uvhi_fetch_data"
+                        android:title="@string/preference_screen_uvhi_fetchData_title"
+                        android:summary="@string/preference_screen_uvhi_fetchData_summary"
+                        android:defaultValue="false"/>
+                <CheckBoxPreference
+                        android:key="PREF_uvhi_maindisplay"
+                        android:title="@string/preference_screen_uvhi_showInMain_title"
+                        android:summary="@string/preference_screen_uvhi_showInMain_summary"
+                        android:defaultValue="false"/>
+
+            </PreferenceScreen>
+
+
+            <CheckBoxPreference
+                    android:key="PREF_display_station_geo"
+                    android:title="@string/preference_display_station_geo_title"
+                    android:summary="@string/preference_display_station_geo_summary"
+                    android:defaultValue="true"/>
+
+
+            <CheckBoxPreference
+                    android:key="PREF_replace_by_municipality"
+                    android:title="@string/preference_station_replace_title"
+                    android:summary="@string/preference_display_replace_summary"
+                    android:defaultValue="false"/>
+
+            <ListPreference
+                    android:key="PREF_rotationmode"
+                    android:title="@string/preference_display_rotation_title"
+                    android:summary="@string/preference_display_rotation_summary"
+                    android:entries="@array/display_rotation_text"
+                    android:entryValues="@array/display_rotation_values"
+                    android:defaultValue="0"/>
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="PREF_category_general"
+        android:title="@string/preference_category_general">
+
+        <CheckBoxPreference
+            android:key="PREF_setalarm"
+            android:title="@string/preference_setalarm_title"
+            android:summary="@string/preference_setalarm_summary"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+                android:key="PREF_prefetch_maps"
+                android:title="@string/preference_prefetch_maps_title"
+                android:summary="@string/preference_prefetch_maps_summary"
+                android:defaultValue="true"/>
+
+        <CheckBoxPreference
+                android:key="PREF_use_metered_networks"
+                android:title="@string/preference_meterednetwork_title"
+                android:summary="@string/preference_meterednetwork_summary"
+                android:defaultValue="true"/>
+
+        <CheckBoxPreference
+                android:key="PREF_use_wifi_only"
+                android:title="@string/preference_wifionly_title"
+                android:summary="@string/preference_wifionly_summary"
+                android:defaultValue="false"/>
+
+        <ListPreference
+            android:key="PREF_updateinterval"
+            android:title="@string/preference_updateinterval_title"
+            android:summary="@string/preference_pdateinterval_summary"
+            android:entries="@array/updateinterval_text"
+            android:entryValues="@array/updateinterval_values"
+            android:defaultValue="24"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/preference_category_warnings">
+
+        <CheckBoxPreference
+                android:key="PREF_warnings_diable"
+                android:title="@string/preference_disable_warnings_title"
+                android:summary="@string/preference_disable_warnings_summary"
+                android:defaultValue="false"/>
+
+        <ListPreference
+            android:key="PREF_warnings_cachetime"
+            android:title="@string/preference_cache_warnings_title"
+            android:summary="@string/preference_cache_warnings_summary"
+            android:entries="@array/cache_warnings_time_text"
+            android:entryValues="@array/cache_warnings_time_values"
+            android:defaultValue="30"/>
+
+        <PreferenceScreen
+                android:key="PREF_screen_notification"
+                android:title="@string/preference_screen_notifications_title"
+                android:summary="@string/preference_screen_notifications_summary">
+
+            <CheckBoxPreference
+                    android:key="PREF_notify_warnings"
+                    android:title="@string/preference_notify_warnings_title"
+                    android:summary="@string/preference_notify_warnings_summary"
+                    android:defaultValue="true"/>
+
+            <ListPreference
+                    android:key="PREF_warnings_notify_severity"
+                    android:title="@string/preference_notifySeverity_title"
+                    android:summary="@string/preference_notifySeverity_summary"
+                    android:entries="@array/display_notifySeverity_text"
+                    android:entryValues="@array/display_notifySeverity_value"
+                    android:defaultValue="Minor"/>
+
+            <de.kaffeemitkoffein.tinyweatherforecastgermany.NumberPickerPreference
+                    android:key="PREF_max_loc_in_shared_warnings"
+                    android:title="@string/preference_max_loc_in_shared_warnings_title"
+                    android:summary="@string/preference_max_loc_in_shared_warnings_summary"
+            />
+
+            <CheckBoxPreference
+                    android:key="PREF_warnings_notify_LED"
+                    android:title="@string/preference_notify_LED_title"
+                    android:summary="@string/preference_notify_LED_summary"
+                    android:defaultValue="true"/>
+
+            <de.kaffeemitkoffein.tinyweatherforecastgermany.LEDColorPreference
+                    android:key="PREF_led_color"
+                    android:title="@string/preference_notify_LEDcolor_title"
+                    android:summary="@string/preference_notify_LEDcolor_summary"/>
+
+            <Preference
+                    android:key="PREF_clearnotifications"
+                    android:title="@string/preference_clearnotifications_title"
+                    android:summary="@string/preference_clearnotifications_summary">
+            </Preference>
+
+            <Preference
+                    android:key="PREF_led_notice"
+                    android:icon="?attr/ic_info_outline"
+                    android:title="@string/preference_led_notice_title"
+                    android:summary="@string/preference_led_notice_summary"/>
+                    />
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/preference_category_texts">
+
+        <CheckBoxPreference
+                android:key="PREF_update_textforecasts"
+                android:title="@string/preference_update_textforecasts_title"
+                android:summary="@string/preference_update_textforecasts_summary"
+                android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/preference_category_widget">
+
+        <CheckBoxPreference
+                android:key="PREF_widget_displaywarnings"
+                android:title="@string/preference_displaywarninginwidget_title"
+                android:summary="@string/preference_displaywarninginwidget_summary"
+                android:defaultValue="true"/>
+
+        <ListPreference
+            android:key="PREF_widget_opacity"
+            android:title="@string/preference_opacity_title"
+            android:summary="@string/preference_opacity_summary"
+            android:entries="@array/widget_opacity_text"
+            android:entryValues="@array/widget_opacity_values"
+            android:defaultValue="@string/widget_transparency_default"/>
+
+        <CheckBoxPreference
+            android:key="PREF_widget_showdwdnote"
+            android:title="@string/preference_displaynoteinwidget_title"
+            android:summary="@string/preference_displaynoteinwidget_summary"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/preference_category_location">
+
+        <CheckBoxPreference
+                android:key="PREF_use_backgr_location"
+                android:title="@string/preference_use_background_location_title"
+                android:summary="@string/preference_use_background_location_summary"
+                android:defaultValue="false"/>
+
+        <CheckBoxPreference
+                android:key="PREF_gpsauto"
+                android:title="@string/preference_gpsauto_title"
+                android:summary="@string/preference_gpsauto_summary"
+                android:defaultValue="false"/>
+
+        <CheckBoxPreference
+                android:key="PREF_gpsmanual"
+                android:title="@string/preference_gpsmanual_title"
+                android:summary="@string/preference_gpsmanual_summary"
+                android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/preference_category_other">
+
+        <PreferenceScreen
+            android:key="PREF_screen_gadgetbridge"
+            android:title="@string/preference_screen_gadgetbridge_title"
+            android:summary="@string/preference_screen_gadgetbridge_summary">
+
+            <CheckBoxPreference
+                android:key="PREF_serve_gadgetbridge"
+                android:title="@string/preference_gadgetbridge_serve_title"
+                android:summary="@string/preference_gadgetbridge_serve_summary"
+                android:defaultValue="false"/>
+
+            <CheckBoxPreference
+                android:key="PREF_gadgetbridge_fake_timestamp"
+                android:title="@string/preference_gadgetbridge_faketimestamp_title"
+                android:summary="@string/preference_gadgetbridge_faketimestamp_summary"
+                android:defaultValue="false"/>
+
+            <EditTextPreference
+                android:key="PREF_gadgetbridge_packagename"
+                android:title="@string/preference_gadgetbridge_packagename_title"
+                android:summary="@string/preference_gadgetbridge_packagename_summary"
+                android:defaultValue="nodomain.freeyourgadget.gadgetbridge"/>
+
+            <Preference
+                android:key="PREF_gadgetbridge_notice"
+                android:icon="?attr/ic_info_outline"
+                android:title="@string/preference_gadgetbridge_notice_title"
+                android:summary="@string/preference_gadgetbridge_notice_summary" />
+
+        </PreferenceScreen>
+
+        <Preference
+                android:key="PREF_reset"
+                android:title="@string/preference_reset_title"
+                android:summary="@string/preference_reset_summary">
+        </Preference>
+
+
+        <PreferenceScreen
+            android:key="PREF_screen_logging"
+            android:title="@string/preference_loggingscreen_title"
+            android:summary="@string/preference_loggingscreen_summary">
+
+            <CheckBoxPreference
+                android:key="PREF_logging"
+                android:title="@string/preference_logging_title"
+                android:summary="@string/preference_logging_summary"/>
+
+            <CheckBoxPreference
+                android:key="PREF_log_to_logcat"
+                android:title="@string/preference_log_to_logcat_title"
+                android:summary="@string/preference_log_to_logcat_summary"/>
+
+            <Preference
+                android:key="PREF_start_loggingactivity"
+                android:title="@string/preference_loggingactivity_title"
+                android:summary="@string/preference_loggingactivity_summary">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:targetPackage="de.kaffeemitkoffein.tinyweatherforecastgermany"
+                    android:targetClass="de.kaffeemitkoffein.tinyweatherforecastgermany.LoggingActivity"/>
+            </Preference>
+
+            <Preference
+                android:key="PREF_feedback"
+                android:title="@string/preference_feedback_title"
+                android:summary="@string/preference_feedback_summary">
+                <intent android:action="android.intent.action.SENDTO"
+                    android:data="mailto:weather@kaffeemitkoffein.de">
+                    <extra android:name="android.intent.extra.SUBJECT" android:value="@string/feedback_mail_subject"/>
+                    <extra android:name="android.intent.extra.TEXT" android:value="@string/feedback_mail_text"/>
+                </intent>
+            </Preference>
+
+            <CheckBoxPreference
+                android:key="PREF_disable_tls"
+                android:title="@string/preference_ssl_title"
+                android:summary="@string/preference_ssl_summary"
+                android:defaultValue="false"/>
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <Preference
+        android:key="PREF_intro"
+        android:title="@string/preference_intro_title"
+        android:summary="@string/preference_intro_summary">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="de.kaffeemitkoffein.tinyweatherforecastgermany"
+            android:targetClass="de.kaffeemitkoffein.tinyweatherforecastgermany.WelcomeActivity">
+            <extra android:name="mode" android:value="replay"/>
+        </intent>
+    </Preference>
+
+</PreferenceScreen>
+
+

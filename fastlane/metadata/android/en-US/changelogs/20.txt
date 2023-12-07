@@ -1,0 +1,5 @@
+- new text forecasts
+- improved weather warnings
+- wind icon can show a wind forecast
+- revised and updated bold widget
+- various bug-fixes

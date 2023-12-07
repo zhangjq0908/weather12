@@ -1,0 +1,8 @@
+- faster app startup
+- wind speed can now be displayed in charts
+- determination of the next weather station in the background
+- improved Gadgetbridge support (WeatherSpec v4)
+- dew point display in weather details
+- revised weather icons, the moon now shows the moon phase
+- the number of affected locations in shared warnings can be limited
+- minor bug fixes and other improvements

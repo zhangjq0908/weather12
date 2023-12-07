@@ -1,0 +1,6 @@
+
+- added wind units: m/s, beaufort (bf), knots (kn)
+- added distance units: nautic miles, miles & yards
+- wind direction can now be displayed in three ways: simple arrow, arrow with wind speed (beaufort), text
+- fixed error in bitmap rotation of arrow resulting in wrong wind direction display
+- minor layout improvements in the widgets

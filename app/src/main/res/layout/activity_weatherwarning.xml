@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ This file is part of TinyWeatherForecastGermany.
+
+ Copyright (c) 2020, 2021 Pawel Dube
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<RelativeLayout
+        android:id="@+id/warningactivity_main_relative_container"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/gps_progress_holder"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            android:background="?attr/colorPrimaryLight"
+            android:orientation="horizontal">
+
+        <ProgressBar
+                android:id="@+id/gps_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:indeterminate="true"
+                android:layout_alignParentLeft="true"
+                android:background="?attr/colorPrimaryLight"
+        />
+
+        <TextView
+                android:id="@+id/wait_for_gps_fix_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/main_wait_for_gps_fix"
+                android:textColor="?attr/colorText"
+                android:layout_gravity="left"
+                android:layout_toRightOf="@id/gps_progress_bar"
+                android:background="?attr/colorPrimaryLight"
+                android:textSize="@dimen/fcmain_textsize_medium"/>
+
+        <Button
+                android:id="@+id/cancel_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:background="?attr/colorPrimary"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/fcmain_textsize_medium"
+                android:text="@string/geoinput_cancel"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/warningactivity_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/gps_progress_holder"
+            android:layout_alignWithParentIfMissing="true"
+            android:weightSum="20"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/warningactivity_map_collapsed_container"
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:layout_height="0dp"
+                android:visibility="gone">
+            <ImageView
+                    android:id="@+id/warningactivity_map_collapsed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/map_collapsed"/>
+            <ImageView
+                    android:id="@+id/warningactivity_map_collapsed_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@mipmap/arrow_down"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/warningactivity_mapcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="14">
+            <ImageView
+                    android:id="@+id/warningactivity_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/germany">
+            </ImageView>
+
+            <RelativeLayout
+                    android:id="@+id/warningactivity_windicon_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true">
+
+                <ImageView
+                        android:id="@+id/warningactivity_windicon_background"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerInParent="true">
+                </ImageView>
+
+                <ImageView
+                        android:id="@+id/warningactivity_windicon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true">
+                </ImageView>
+
+            </RelativeLayout>
+
+            <ImageView
+                    android:id="@+id/closeicon_map"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@mipmap/arrow_up">
+            </ImageView>
+
+            <LinearLayout
+                    android:id="@+id/warningactivity_mapinfo_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="5dp"
+                    android:weightSum="20">
+
+                <TextView
+                        android:id="@+id/warningactivity_rainslidetime"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/fcmain_mediumdevice_textsize_medium"
+                        android:shadowColor="@android:color/black"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:padding="1dp"
+                        android:textStyle="bold"
+                        android:text=""/>
+
+                <ImageView
+                        android:id="@+id/warningactivity_mapinfo"
+                        android:layout_width="0dp"
+                        android:layout_weight="14"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom">
+                </ImageView>
+
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_weight="3">
+
+                    <ProgressBar
+                            android:id="@+id/warningactivity_rainslideprogressbar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:progressDrawable="@drawable/ring"
+                            android:indeterminate="false"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:visibility="invisible"
+                            android:max="23"/>
+
+                    <TextView
+                            android:id="@+id/warningactivity_rainslideprogressbartext"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:textSize="6dp"
+                            android:textColor="@android:color/white"
+                            android:shadowColor="@android:color/black"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="1"
+                            android:visibility="invisible"
+                            android:text=""/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <ListView android:id="@+id/warningactivity_listview"
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="6"
+                  android:divider="?attr/colorTextDark"
+                  android:dividerHeight="0dp"
+                  android:layout_marginLeft="@dimen/slider_marginDouble"
+                  android:layout_marginRight="@dimen/slider_marginDouble"
+                  android:footerDividersEnabled="true"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/warnings_outdated"
+                android:textColor="?attr/colorPrimaryDark"
+                android:background="@color/colorWarning_moderate"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="@dimen/fcmain_textsize_medium"
+                android:visibility="gone"
+                android:paddingTop="@dimen/warning_ip"
+                android:paddingBottom="@dimen/warning_ip"
+                android:id="@+id/warningactivity_warnings_deprecated"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorPrimaryDark"
+                android:background="@color/colorWarning_clear"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="@dimen/fcmain_textsize_medium"
+                android:visibility="gone"
+                android:text="@string/warnings_none"
+                android:paddingTop="@dimen/warning_ip"
+                android:paddingBottom="@dimen/warning_ip"
+                android:id="@+id/warningactivity_no_warnings"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dwd_warnings_notice"
+                android:textColor="?attr/colorTextDark"
+                android:background="?attr/colorPrimary"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="@dimen/fcmain_textsize_medium"
+                android:id="@+id/warningactivity_notice_text"/>
+    </LinearLayout>
+
+    <ProgressBar
+            android:id="@+id/warningactivity_progressbar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+</RelativeLayout>
+

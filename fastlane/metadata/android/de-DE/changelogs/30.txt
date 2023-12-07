@@ -1,0 +1,8 @@
+- aktualisierte Sprachen, neu: Spanisch (Danke an eUgEntOptIc44!)
+- die Wind-Vorhersage als Bogen im Icon ist korrigiert und wieder da
+- fügt rel. Luftfeuchtigkeit zum Clock Widget hinzu
+- behebt Widget-Absturz beim Aufruf vor dem ersten App-Start
+- behebt wiederholende Updates, die auftreten konnten
+- behebt Absturz beim Wechsel zu einer bekannten Wetterstation, wenn aktuelle Daten fehlten
+- behebt Absturz der Log-Aktivität, verbessertes Logging (optional)
+- kleinere Fehlerbehebungen & Verbesserungen der Benutzeroberfläche

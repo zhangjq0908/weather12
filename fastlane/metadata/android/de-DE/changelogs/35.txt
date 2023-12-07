@@ -1,0 +1,6 @@
+- neue Sprache: Ukrainisch (Danke an Andrij Mizyk & eUgEntOptIc44!)
+- neue Übersicht-Grafik (kann in den Einstellungen aktiviert werden)
+- neues, horizontales Layout für Anzeigen mit einer Breite von mindestens 600dp
+- langes Drücken auf eine Vorhersage öffnet eine detailliertere Ansicht
+- behoben: Vorhersagen auf Wearables waren um einen Tag verschoben
+- behoben: min./max. Temperaturwerte waren manchmal im 1. Vorhersage-Intervall falsch

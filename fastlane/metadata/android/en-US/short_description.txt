@@ -1,0 +1,1 @@
+Weather forecast based on open data from the Deutscher Wetterdienst.

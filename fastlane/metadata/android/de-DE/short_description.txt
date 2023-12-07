@@ -1,0 +1,1 @@
+Wettervorschau, basierend auf frei zugänglichen Daten des Deutschen Wetterdienstes.

@@ -1,0 +1,89 @@
+Tiny Weather Forecast Germany
+=================================
+
+Copyright © 2020, 2021, 2022, 2023 Pawel Dube
+
+Version: [VERSION]
+
+Credits:
+--------
+
+Material design icons Copyright © Google Inc., licensed under the Apache 2.0 license.
+
+This app uses gradle and the gradle wrapper, Copyright © Gradle Inc, licensed under the Apache 2.0 license.
+
+Data basis: Deutscher Wetterdienst, own elements added, some data averaged over individual values. Weather warnings are abbreviated. Source for geo-data: Deutscher Wetterdienst
+
+This program uses the WeatherSpec class of Gadgetbridge, Copyright © 2016-2020 Andreas Shimokawa, Carsten Pfeiffer, Daniele Gobbetti, licensed under the GNU AFFRERO GENERAL PUBLIC LICENSE, Version 3, 19 November 2007.
+
+This program uses PNPOLY - Point Inclusion in Polygon Test by W. Randolph Franklin (WRF), Copyright © 1970-2003, Wm. Randolph Franklin
+
+This program uses the Astronomy class, Copyright (C) 2010-2012, Helmut Lehmeyer, licensed under the GNU General Public License version 3.
+
+PAT maps by Ian Macky <http://ian.macky.net/pat>. Images of the "Lange Anna" (Helgoland) and the Pellworm lighthouse by arwanger.
+
+Calculation of relative humidity from temperature and dew point is done using a simplified formula example from the DWD (Deutscher Wetterdienst), see <https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/faq/faq_mosmix_node.html>.
+
+Uses the Solarized Precision colors for machines and people theme, Copyright (c) 2011 Ethan Schoonover.
+
+App icon by Janis Bitta.
+
+The following persons contributed to this project:
+ - Andreas Shimokawa (bugfixes & support for the Gadgetbridge API)
+ - Izzy (metadata improvements)
+ - Janis Bitta (app icon)
+ - Jonas Lochmann (.gitignore)
+ - Marc Nause (code improvements, bitmap caching)
+ - arwanger (README.md, images)
+ - maximilianovermeyer (fix of geo-intent-handling)
+ - eUgEntOptIc44 (javadoc improvements)
+
+Translations:
+* Czech: eUgEntOptIc44, mondstern
+* Danish: eUgEntOptIc44, mondstern
+* Dutch: Allan Nordhøy, alternative_be, eUgEntOptIc44, jwildeboer, mondstern, Vistaus
+* English: Allan Nordhøy
+* French: Allan Nordhøy, eUgEntOptIc44, J. Lavoie, Jean-Luc Tibaux, lejun, mondstern
+* Finnish: eUgEntOptIc44, mondstern
+* German: Aircan, Allan Nordhøy, buhtz, eUgEntOptIc44, Hexagon, Hiajen, J. Lavoie, mondstern, silmaril, w4ts0n
+* Hungarian: eUgEntOptIc44, Gőz Barnabás
+* Indonesian: Linerly
+* Italian: mondstern, eUgEntOptIc44
+* Irish: mondstern
+* Norwegian Bokmål: Allan Nordhøy, eUgEntOptIc44, mondstern
+* Polish: eUgEntOptIc44, Eryk Michalak, ewm, mondstern
+* Russian: Wirdi51
+* Spanish: eUgEntOptIc44, hegondev
+* Swedish: tygyh
+* Ukrainian: eUgEntOptIc44, Andrij Mizyk, SomeTr
+
+License:
+--------
+
+This program ist free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+Author: Pawel Dube (pdube@gmx.de)
+
+Privacy policy:
+---------------
+
+Tiny Weather Forecast Germany polls weather data and weather warnings from the open-data portal and the geoserver of the Deutscher Wetterdienst <https://www.dwd.de/DE/Home/home_node.html>.
+
+Do do so, it is technically required to send your IP-address to the Deutscher Wetterdienst in the context of the internet connection and also the place/sensor, for which the data has to be polled.
+
+In case of the warnings it is also transmitted if they should be polled in French, Spanish, German or English, depending on the language setting of the device. How this data is handled and stored by the Deutscher Wetterdienst is explained in the privacy policy of the Deutscher Wetterdienst <https://www.dwd.de/EN/service/dataprotection/dataprotection_node.html>.
+
+The weather forecasts and weather warnings are saved locally on the device, also the set-up places/sensors. The settings and some internal variables like the last time of a weather warnings poll are also saved locally on the device.
+
+If activated by the user, Tiny Weather Forecast Germany passes the weather data locally on the device to the Gadgetbridge <https://codeberg.org/Freeyourgadget/Gadgetbridge> app, so that the weather data can be displayed on wearables.
+
+Beyond that, Tiny Weather Forecast Germany does not save, send and/or share any data.
+
+Contributing:
+-------------
+
+This project ist hosted on codeberg.org. Please visit the project homepage at <https://codeberg.org/Starfish/TinyWeatherForecastGermany>.

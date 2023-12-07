@@ -1,0 +1,5 @@
+- improved performance when rotating device
+- fixes multiple bugs:
+- some potential app crashes during launch
+- some weather stations could not be selected
+- some weather stations were doubled in the suggestions

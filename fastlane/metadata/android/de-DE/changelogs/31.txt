@@ -1,0 +1,1 @@
+- behebt defekten Gadgetbridge-Support

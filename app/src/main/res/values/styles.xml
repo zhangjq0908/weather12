@@ -1,0 +1,390 @@
+<!--
+ This file is part of TinyWeatherForecastGermany.
+
+ Copyright (c) 2020, 2021 Pawel Dube
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+
+    <!--
+    *****************************************************************************
+    This is the LIGHT theme based on Holo.Light.
+    *****************************************************************************
+    Note: the Solarized Theme is a child of this theme, not all attributes need
+          to be set there again.
+    -->
+    <style name="AppTheme_Light" parent="android:Theme.Holo.Light">
+        <item name="colorPrimary">@color/colorPrimary_LightTheme</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_LightTheme</item>
+        <item name="colorPrimaryLight">@color/colorPrimaryLight_LightTheme</item>
+        <item name="colorAccent">@color/colorAccent_LightTheme</item>
+        <item name="colorText">@color/colorText_LightTheme</item>
+        <item name="colorTextDark">@color/colorTextDark_LightTheme</item>
+        <item name="colorTextLight">@color/colorTextLight_LightTheme</item>
+        <item name="colorWelcomeBackground">@color/colorWelcomeBackground_LightTheme</item>
+        <item name="colorWidgetBackground">@color/colorWidgetBackground_LightTheme</item>
+        <item name="colorSecondary">@color/colorSecondary_LightTheme</item>
+        <item name="colorAccentYellow">@color/colorAccentYellow_Solarized</item>
+        <item name="colorAccentOrange">@color/colorAccentOrange_Solarized</item>
+        <item name="colorAccentRed">@color/colorAccentRed_Solarized</item>
+        <item name="colorAccentMagenta">@color/colorAccentMagenta_Solarized</item>
+        <item name="colorAccentViolet">@color/colorAccentViolet_Solarized</item>
+        <item name="colorAccentBlue">@color/colorAccentBlue_Solarized</item>
+        <item name="colorAccentCyan">@color/colorAccentCyan_Solarized</item>
+        <item name="colorAccentGreen">@color/colorAccentGreen_Solarized</item>
+
+        <item name="ic_search">@mipmap/ic_search_black_24dp</item>
+        <item name="ic_refresh">@mipmap/ic_refresh_black_24dp</item>
+        <item name="ic_short_text">@mipmap/ic_short_text_black_24dp</item>
+        <item name="ic_settings">@mipmap/ic_settings_black_24dp</item>
+        <item name="warning_icon">@mipmap/warning_icon_black</item>
+        <item name="ic_list">@mipmap/ic_list_black_24dp</item>
+        <item name="ic_gps_fixed">@mipmap/ic_gps_fixed_black_24dp</item>
+        <item name="ic_info_outline">@mipmap/ic_info_outline_black_24dp</item>
+        <item name="ic_copyright">@mipmap/ic_copyright_black_24dp</item>
+        <item name="ic_announcement">@mipmap/ic_announcement_black_24dp</item>
+        <item name="ic_chevron_left">@mipmap/ic_chevron_left_black_24dp</item>
+        <item name="ic_chevron_right">@mipmap/ic_chevron_right_black_24dp</item>
+        <item name="ic_filter">@mipmap/ic_filter_black_24dp</item>
+        <item name="ic_filter_list">@mipmap/ic_filter_list_black_24dp</item>
+        <item name="ic_radio_button_unchecked">@mipmap/ic_radio_button_unchecked_black_24dp</item>
+        <item name="ic_radio_button_checked">@mipmap/ic_radio_button_checked_black_24dp</item>
+        <item name="ic_highlight_off">@mipmap/ic_highlight_off_black_24dp</item>
+        <item name="ic_share">@mipmap/ic_share_black_24dp</item>
+        <item name="ic_content_copy">@mipmap/ic_content_copy_black_24dp</item>
+        <item name="ic_add">@mipmap/ic_add_black_24dp</item>
+        <item name="ic_access_alarm">@mipmap/ic_access_alarm_black_24dp</item>
+        <item name="ic_check">@mipmap/ic_check_black_24dp</item>
+        <item name="ic_map">@mipmap/ic_map_black_24dp</item>
+        <item name="ic_image_not_supported">@mipmap/ic_image_not_supported_black_24dp</item>
+
+        <item name="white_bar">@mipmap/white_bar_black</item>
+        <item name="binocular">@mipmap/biocular_black</item>
+        <item name="symbol_sun">@mipmap/symbol_sun_black</item>
+
+        <!-- styles the actionbar -->
+        <item name="android:actionBarStyle">@style/ActionBar_Light</item>
+        <!-- set the overflow button to a modern burger style -->
+        <item name="android:actionOverflowButtonStyle">@style/BurgerIcon_Light</item>
+        <!-- styles the settings and the main weather listview/warnings background-->
+        <item name="android:listViewStyle">@style/ListView_Light</item>
+        <!-- theme of the AlertDialog - the Solarized themes inherit this -->
+        <item name="android:alertDialogTheme">@style/alertDialogTheme_LightTheme</item>
+        <!-- set the background of the overflow menu -->
+        <item name="android:itemBackground">@color/colorPrimaryLight_LightTheme</item>
+        <!-- set the color of, activity title and overflow menu text color, settings item titles -->
+        <item name="android:textColorPrimary">@color/colorTextLight_LightTheme</item>
+        <!-- set the color of, activity subtitle, settings decriptions -->
+        <item name="android:textColorSecondary">@color/colorTextDark_LightTheme</item>
+        <!-- unknown -->
+        <item name="android:textColorTertiary">@color/colorText_LightTheme</item>
+        <!-- styles the AlertDialogs -->
+        <item name="android:alertDialogStyle">@style/alertDialogStyle_LightTheme</item>
+
+    </style>
+
+    <style name="ActionBar_Light" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/colorPrimaryLight_LightTheme</item>
+    </style>
+
+    <style name="BurgerIcon_Light" parent="android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@mipmap/ic_more_vert_black_24dp</item>
+    </style>
+
+    <style name="ListView_Light" parent="@android:style/Widget.ListView">
+        <item name="android:background">@color/colorPrimary_LightTheme</item>
+    </style>
+
+    <style name="ButtonStyle_Light" parent="@android:style/Widget.Holo.Light.Button.Borderless.Small">
+        <item name="android:textColor">@color/colorText_LightTheme</item>
+    </style>
+
+    <style name="AlertDialogTitle_Light">
+        <item name="android:textColor">@color/colorText_LightTheme</item>
+        <item name="android:textSize">@dimen/fcmain_textsize_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="alertDialogTheme_LightTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:buttonBarButtonStyle">@style/ButtonStyle_Light</item>
+        <item name="android:windowTitleStyle">@style/AlertDialogTitle_Light</item>
+    </style>
+
+    <!-- styles the AlertDialogs-->
+    <style name="alertDialogStyle_LightTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:fullDark">@color/colorPrimaryLight_LightTheme</item>
+        <item name="android:topDark">@color/colorPrimaryLight_LightTheme</item>
+        <item name="android:centerDark">@color/colorPrimaryLight_LightTheme</item>
+        <item name="android:bottomDark">@color/colorPrimaryLight_LightTheme</item>
+
+        <item name="android:fullBright">@color/colorPrimaryLight_LightTheme</item>
+        <item name="android:topBright">@color/colorPrimaryLight_LightTheme</item>
+        <item name="android:centerBright">@color/colorPrimaryLight_LightTheme</item>
+        <item name="android:bottomBright">@color/colorPrimaryLight_LightTheme</item>
+        <item name="android:bottomMedium">@color/colorPrimaryLight_LightTheme</item>
+    </style>
+
+
+    <!--
+    *****************************************************************************
+    This is the DARK theme based on Holo.
+    *****************************************************************************
+    Note: the Solarized_Dark Theme is a child of this theme, not all attributes need
+          to be set there again.
+    -->
+
+    <style name="AppTheme_Dark" parent="android:Theme.Holo">
+        <item name="colorPrimary">@color/colorPrimary_DarkTheme</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_DarkTheme</item>
+        <item name="colorPrimaryLight">@color/colorPrimaryLight_DarkTheme</item>
+        <item name="colorAccent">@color/colorAccent_DarkTheme</item>
+        <item name="colorText">@color/colorText_DarkTheme</item>
+        <item name="colorTextDark">@color/colorTextDark_DarkTheme</item>
+        <item name="colorTextLight">@color/colorTextLight_DarkTheme</item>
+        <item name="colorWelcomeBackground">@color/colorWelcomeBackground_DarkTheme</item>
+        <item name="colorWidgetBackground">@color/colorWidgetBackground_DarkTheme</item>
+        <item name="colorSecondary">@color/colorSecondary_DarkTheme</item>
+
+        <item name="colorAccentYellow">@color/colorAccentYellow_Solarized</item>
+        <item name="colorAccentOrange">@color/colorAccentOrange_Solarized</item>
+        <item name="colorAccentRed">@color/colorAccentRed_Solarized</item>
+        <item name="colorAccentMagenta">@color/colorAccentMagenta_Solarized</item>
+        <item name="colorAccentViolet">@color/colorAccentViolet_Solarized</item>
+        <item name="colorAccentBlue">@color/colorAccentBlue_Solarized</item>
+        <item name="colorAccentCyan">@color/colorAccentCyan_Solarized</item>
+        <item name="colorAccentGreen">@color/colorAccentGreen_Solarized</item>
+
+        <item name="ic_search">@mipmap/ic_search_white_24dp</item>
+        <item name="ic_refresh">@mipmap/ic_refresh_white_24dp</item>
+        <item name="ic_short_text">@mipmap/ic_short_text_white_24dp</item>
+        <item name="ic_settings">@mipmap/ic_settings_white_24dp</item>
+        <item name="warning_icon">@mipmap/warning_icon</item>
+        <item name="ic_list">@mipmap/ic_list_white_24dp</item>
+        <item name="ic_gps_fixed">@mipmap/ic_gps_fixed_white_24dp</item>
+        <item name="ic_info_outline">@mipmap/ic_info_outline_white_24dp</item>
+        <item name="ic_copyright">@mipmap/ic_copyright_white_24dp</item>
+        <item name="ic_announcement">@mipmap/ic_announcement_white_24dp</item>
+        <item name="ic_chevron_left">@mipmap/ic_chevron_left_white_24dp</item>
+        <item name="ic_chevron_right">@mipmap/ic_chevron_right_white_24dp</item>
+        <item name="ic_filter">@mipmap/ic_filter_white_24dp</item>
+        <item name="ic_filter_list">@mipmap/ic_filter_list_white_24dp</item>
+        <item name="ic_radio_button_unchecked">@mipmap/ic_radio_button_unchecked_white_24dp</item>
+        <item name="ic_radio_button_checked">@mipmap/ic_radio_button_checked_white_24dp</item>
+        <item name="ic_highlight_off">@mipmap/ic_highlight_off_white_24dp</item>
+        <item name="ic_share">@mipmap/ic_share_white_24dp</item>
+        <item name="ic_content_copy">@mipmap/ic_content_copy_white_24dp</item>
+        <item name="ic_add">@mipmap/ic_add_white_24dp</item>
+        <item name="ic_access_alarm">@mipmap/ic_access_alarm_white_24dp</item>
+        <item name="ic_check">@mipmap/ic_check_white_24dp</item>
+        <item name="ic_map">@mipmap/ic_map_white_24dp</item>
+        <item name="ic_image_not_supported">@mipmap/ic_image_not_supported_24dp</item>
+
+        <item name="white_bar">@mipmap/white_bar</item>
+        <item name="binocular">@mipmap/biocular</item>
+        <item name="symbol_sun">@mipmap/symbol_sun</item>
+
+        <!-- styles the actionbar -->
+        <item name="android:actionBarStyle">@style/ActionBar_Dark</item>
+        <!-- set the overflow button to a modern burger style -->
+        <item name="android:actionOverflowButtonStyle">@style/BurgerIcon_Dark</item>
+        <!-- styles the settings and the main weather listview/warnings background-->
+        <item name="android:listViewStyle">@style/ListView_Dark</item>
+        <!-- set the background of the overflow menu -->
+        <!-- theme of the AlertDialog - the Solarized themes inherit this -->
+        <item name="android:alertDialogTheme">@style/alertDialogTheme_DarkTheme</item>
+        <item name="android:itemBackground">@color/colorPrimaryLight_DarkTheme</item>
+        <!-- set the color of, activity title and overflow menu text color, settings item titles -->
+        <item name="android:textColorPrimary">@color/colorTextLight_DarkTheme</item>
+        <!-- set the color of, activity subtitle, settings decriptions -->
+        <item name="android:textColorSecondary">@color/colorTextDark_DarkTheme</item>
+        <!-- unknown -->
+        <item name="android:textColorTertiary">@color/colorText_DarkTheme</item>
+        <!-- styles the AlertDialogs -->
+        <item name="android:alertDialogStyle">@style/alertDialogStyle_DarkTheme</item>
+    </style>
+
+    <style name="ActionBar_Dark" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/colorPrimaryLight_DarkTheme</item>
+    </style>
+
+    <style name="BurgerIcon_Dark" parent="android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@mipmap/ic_more_vert_white_24dp</item>
+    </style>
+
+    <style name="ListView_Dark" parent="@android:style/Widget.ListView">
+        <item name="android:background">@color/colorPrimary_DarkTheme</item>
+    </style>
+
+    <style name="ButtonStyle_Dark" parent="@android:style/Widget.Holo.Button.Borderless.Small">
+        <item name="android:textColor">@color/colorText_DarkTheme</item>
+    </style>
+
+    <style name="AlertDialogTitle_Dark">
+        <item name="android:textColor">@color/colorText_DarkTheme</item>
+        <item name="android:textSize">@dimen/fcmain_textsize_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="alertDialogTheme_DarkTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:buttonBarButtonStyle">@style/ButtonStyle_Dark</item>
+        <item name="android:windowTitleStyle">@style/AlertDialogTitle_Dark</item>
+    </style>
+
+    <!-- styles the AlertDialogs-->
+    <style name="alertDialogStyle_DarkTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:fullDark">@color/colorPrimaryLight_DarkTheme</item>
+        <item name="android:topDark">@color/colorPrimaryLight_DarkTheme</item>
+        <item name="android:centerDark">@color/colorPrimaryLight_DarkTheme</item>
+        <item name="android:bottomDark">@color/colorPrimaryLight_DarkTheme</item>
+
+        <item name="android:fullBright">@color/colorPrimaryLight_DarkTheme</item>
+        <item name="android:topBright">@color/colorPrimaryLight_DarkTheme</item>
+        <item name="android:centerBright">@color/colorPrimaryLight_DarkTheme</item>
+        <item name="android:bottomBright">@color/colorPrimaryLight_DarkTheme</item>
+        <item name="android:bottomMedium">@color/colorPrimaryLight_DarkTheme</item>
+    </style>
+
+
+    <!--
+    *****************************************************************************
+    This is the SOLARIZED theme based on the Light theme, based on Holo.Light.
+    *****************************************************************************
+    Notes:
+        - the Light theme is parent, some things need not to be set again
+        - colorPrimary & colorPrimaryDark are the same
+    -->
+
+    <style name="AppTheme_Solarized" parent="AppTheme_Light">
+        <item name="colorPrimary">@color/colorPrimary_Solarized</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_Solarized</item>
+        <item name="colorPrimaryLight">@color/colorPrimaryLight_Solarized</item>
+        <item name="colorAccent">@color/colorAccent_Solarized</item>
+        <item name="colorText">@color/colorText_Solarized</item>
+        <item name="colorTextDark">@color/colorTextDark_Solarized</item>
+        <item name="colorTextLight">@color/colorTextLight_Solarized</item>
+        <item name="colorWelcomeBackground">@color/colorWelcomeBackground_Solarized</item>
+        <item name="colorWidgetBackground">@color/colorWidgetBackground_Solarized</item>
+        <item name="colorSecondary">@color/colorSecondary_Solarized</item>
+
+        <!-- styles the actionbar -->
+        <item name="android:actionBarStyle">@style/ActionBar_Solarized</item>
+        <!-- styles the settings and the main weather listview/warnings background-->
+        <item name="android:listViewStyle">@style/ListView_Solarized</item>
+        <!-- styles the AlertDialogs -->
+        <item name="android:alertDialogStyle">@style/alertDialogStyle_Solarized</item>
+        <!-- set the background of the overflow menu -->
+        <item name="android:itemBackground">@color/colorPrimaryLight_Solarized</item>
+        <!-- set the color of, activity title and overflow menu text color, settings item titles -->
+        <item name="android:textColorPrimary">@color/colorTextLight_Solarized</item>
+        <!-- set the color of, activity subtitle, settings decriptions -->
+        <item name="android:textColorSecondary">@color/colorTextDark_Solarized</item>
+        <!-- unknown -->
+        <item name="android:textColorTertiary">@color/colorText_Solarized</item>
+
+    </style>
+
+    <style name="ActionBar_Solarized" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/colorPrimaryLight_Solarized</item>
+    </style>
+
+    <style name="ListView_Solarized" parent="@android:style/Widget.ListView">
+        <item name="android:background">@color/colorPrimary_Solarized</item>
+    </style>
+
+    <!-- styles the AlertDialogs-->
+    <style name="alertDialogStyle_Solarized" parent="@android:style/Theme.Dialog">
+        <item name="android:fullDark">@color/colorPrimaryLight_Solarized</item>
+        <item name="android:topDark">@color/colorPrimaryLight_Solarized</item>
+        <item name="android:centerDark">@color/colorPrimaryLight_Solarized</item>
+        <item name="android:bottomDark">@color/colorPrimaryLight_Solarized</item>
+
+        <item name="android:fullBright">@color/colorPrimaryLight_Solarized</item>
+        <item name="android:topBright">@color/colorPrimaryLight_Solarized</item>
+        <item name="android:centerBright">@color/colorPrimaryLight_Solarized</item>
+        <item name="android:bottomBright">@color/colorPrimaryLight_Solarized</item>
+        <item name="android:bottomMedium">@color/colorPrimaryLight_Solarized</item>
+    </style>
+
+    <!--
+    *******************************************************************************
+    This is the SOLARIZED_DARK theme based on the Light theme, based on Holo.Light.
+    *******************************************************************************
+    Notes:
+        - the Dark theme is parent, some things need not to be set again
+        - colorPrimary & colorPrimaryDark are the same
+    -->
+
+    <style name="AppTheme_SolarizedDark" parent="AppTheme_Dark">
+        <item name="colorPrimary">@color/colorPrimary_SolarizedDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_SolarizedDark</item>
+        <item name="colorPrimaryLight">@color/colorPrimaryLight_SolarizedDark</item>
+        <item name="colorAccent">@color/colorAccent_SolarizedDark</item>
+        <item name="colorText">@color/colorText_SolarizedDark</item>
+        <item name="colorTextDark">@color/colorTextDark_SolarizedDark</item>
+        <item name="colorTextLight">@color/colorTextLight_SolarizedDark</item>
+        <item name="colorWelcomeBackground">@color/colorWelcomeBackground_SolarizedDark</item>
+        <item name="colorWidgetBackground">@color/colorWidgetBackground_SolarizedDark</item>
+        <item name="colorSecondary">@color/colorSecondary_SolarizedDark</item>
+
+        <!-- styles the actionbar -->
+        <item name="android:actionBarStyle">@style/ActionBar_SolarizedDark</item>
+        <!-- styles the settings and the main weather listview/warnings background-->
+        <item name="android:listViewStyle">@style/ListView_SolarizedDark</item>
+        <!-- set the background of the overflow menu -->
+        <!-- styles the AlertDialogs -->
+        <item name="android:alertDialogStyle">@style/alertDialogStyle_SolarizedDark</item>
+        <item name="android:itemBackground">@color/colorPrimaryLight_SolarizedDark</item>
+        <!-- set the color of, activity title and overflow menu text color, settings item titles -->
+        <item name="android:textColorPrimary">@color/colorTextLight_SolarizedDark</item>
+        <!-- set the color of, activity subtitle, settings decriptions -->
+        <item name="android:textColorSecondary">@color/colorTextDark_SolarizedDark</item>
+        <!-- unknown -->
+        <item name="android:textColorTertiary">@color/colorText_SolarizedDark</item>
+    </style>
+
+    <style name="ActionBar_SolarizedDark" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/colorPrimaryLight_SolarizedDark</item>
+    </style>
+
+    <style name="ListView_SolarizedDark" parent="@android:style/Widget.ListView">
+        <item name="android:background">@color/colorPrimary_SolarizedDark</item>
+    </style>
+
+    <!-- styles the AlertDialogs, the AlertDialog title and button style are inherited
+     from the Light/Dark themes -->
+    <style name="alertDialogStyle_SolarizedDark" parent="@android:style/Theme.Dialog">
+        <item name="android:fullDark">@color/colorPrimaryLight_SolarizedDark</item>
+        <item name="android:topDark">@color/colorPrimaryLight_SolarizedDark</item>
+        <item name="android:centerDark">@color/colorPrimaryLight_SolarizedDark</item>
+        <item name="android:bottomDark">@color/colorPrimaryLight_SolarizedDark</item>
+
+        <item name="android:fullBright">@color/colorPrimaryLight_SolarizedDark</item>
+        <item name="android:topBright">@color/colorPrimaryLight_SolarizedDark</item>
+        <item name="android:centerBright">@color/colorPrimaryLight_SolarizedDark</item>
+        <item name="android:bottomBright">@color/colorPrimaryLight_SolarizedDark</item>
+        <item name="android:bottomMedium">@color/colorPrimaryLight_SolarizedDark</item>
+    </style>
+
+</resources>
+
+
+

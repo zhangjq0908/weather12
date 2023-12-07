@@ -1,0 +1,10 @@
+- new language: Danish (thanks to mondstern!)
+- widgets now display weather alerts
+- notifications about weather alerts for your chosen location
+- new option to disable use of metered networks
+- better display when using custom font sizes
+- fixes display of weather alerts with an onset > 24h from now
+- fixed issues with VPN use
+- custom Gadgetbridge package name is now used as intended
+- fixed "light snow showers" icon in light themes
+

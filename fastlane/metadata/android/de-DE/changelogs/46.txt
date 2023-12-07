@@ -1,0 +1,8 @@
+- schnellerer App-Start
+- die Windgeschwindigkeit kann nun in Diagrammen angezeigt werden
+- Bestimmung der nächsten Wetterstation im Hintergrund
+- verbesserte Gadgetbridge-Unterstützung (WeatherSpec v4)
+- Taupunkt-Anzeige in den Wetterdetails
+- überarbeitete Wetter-Icons, der Mond zeigt nun die Mondphase an
+- die Aufzählung der betroffenen Orte in geteilten Warnungen kann begrenzt werden
+- kleinere Fehlerbehebungen und weitere Verbesserungen

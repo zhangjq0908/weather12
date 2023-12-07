@@ -1,0 +1,204 @@
+<!--
+ This file is part of TinyWeatherForecastGermany.
+
+ Copyright (c) 2020, 2021 Pawel Dube
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string-array name="updateinterval_text">
+        <item>6 hours</item>
+        <item>12 hours</item>
+        <item>18 hours</item>
+        <item>24 hours</item>
+    </string-array>
+    <string-array name="updateinterval_values">
+        <item>6</item>
+        <item>12</item>
+        <item>18</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="widget_opacity_text">
+        <item>0 (transparent)</item>
+        <item>10 %</item>
+        <item>20 %</item>
+        <item>30 %</item>
+        <item>40 %</item>
+        <item>50 %</item>
+        <item>60 %</item>
+        <item>70 %</item>
+        <item>80 %</item>
+        <item>90 %</item>
+        <item>100 (solid)</item>
+    </string-array>
+    <string-array name="widget_opacity_values">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="cache_warnings_time_text">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hours</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+    </string-array>
+    <string-array name="cache_warnings_time_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>360</item>
+    </string-array>
+
+    <string-array name="display_type_text">
+        <item>hourly forecast</item>
+        <item>6-hourly forecast</item>
+        <item>daily forecast</item>
+        <item>mixed</item>
+    </string-array>
+
+    <string-array name="display_type_values">
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>265</item>
+    </string-array>
+
+    <string-array name="display_wind_type_text">
+        <item>Arrow</item>
+        <item>Beaufort</item>
+        <item>Text</item>
+    </string-array>
+
+    <string-array name="display_wind_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="display_wind_unit_text">
+        <item>m/s</item>
+        <item>km/h</item>
+        <item>beaufort (bf)</item>
+        <item>knots (kn)</item>
+    </string-array>
+
+    <string-array name="display_wind_unit_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="display_distance_unit_text">
+        <item>metric (km, m)</item>
+        <item>nautic (nautic miles)</item>
+        <item>imperial (miles, yards)</item>
+    </string-array>
+
+    <string-array name="display_distance_unit_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="display_wind_arc_period_text">
+        <item>next 6 hours</item>
+        <item>next 12 hours</item>
+        <item>next 24 hours</item>
+    </string-array>
+
+    <string-array name="display_wind_arc_period_values">
+        <item>6</item>
+        <item>12</item>
+        <item>24</item>
+    </string-array>
+
+    <string-array name="theme_text">
+        <item>Dark</item>
+        <item>Light</item>
+        <item>Solarized Dark</item>
+        <item>Solarized</item>
+        <item>Automatic (based on device settings)</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>DARK</item>
+        <item>LIGHT</item>
+        <item>SOLARIZED_DARK</item>
+        <item>SOLARIZED</item>
+        <item>FOLLOW_DEVICE</item>
+    </string-array>
+
+    <string-array name="viewmodel_text">
+        <item>simple</item>
+        <item>detailed</item>
+    </string-array>
+
+    <string-array name="viewmodel_values">
+        <item>SIMPLE</item>
+        <item>EXTENDED</item>
+    </string-array>
+
+    <string-array name="gpsinterval_text">
+        <item>every hour</item>
+        <item>every 6 hours</item>
+        <item>once daily</item>
+    </string-array>
+
+    <string-array name="gpsinterval_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="display_rotation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="display_rotation_text">
+        <item>Device orientation</item>
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+
+    <string-array name="display_notifySeverity_text">
+        <item>minor</item>
+        <item>moderate</item>
+        <item>severe</item>
+        <item>extreme</item>
+    </string-array>
+
+    <string-array name="display_notifySeverity_value">
+        <item>Minor</item>
+        <item>Moderate</item>
+        <item>Severe</item>
+        <item>Extreme</item>
+    </string-array>
+
+</resources>

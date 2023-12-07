@@ -1,0 +1,132 @@
+<!--
+ This file is part of TinyWeatherForecastGermany.
+
+ Copyright (c) 2020, 2021 Pawel Dube
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string-array name="updateinterval_text">
+        <item>6 Stunden</item>
+        <item>12 Stunden</item>
+        <item>18 Stunden</item>
+        <item>24 Stunden</item>
+    </string-array>
+    <string-array name="updateinterval_values">
+        <item>6</item>
+        <item>12</item>
+        <item>18</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="widget_opacity_text">
+        <item>0 (transparent)</item>
+        <item>10 %</item>
+        <item>20 %</item>
+        <item>30 %</item>
+        <item>40 %</item>
+        <item>50 %</item>
+        <item>60 %</item>
+        <item>70 %</item>
+        <item>80 %</item>
+        <item>90 %</item>
+        <item>100 (solid)</item>
+    </string-array>
+    <string-array name="widget_opacity_values">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="cache_warnings_time_text">
+        <item>15 Minuten</item>
+        <item>30 Minuten</item>
+        <item>1 Stunde</item>
+        <item>2 Stunden</item>
+        <item>3 Stunden</item>
+        <item>6 Stunden</item>
+    </string-array>
+
+    <string-array name="display_type_text">
+        <item>stündliche Vorschau</item>
+        <item>6-stündliche Vorschau</item>
+        <item>tägliche Vorschau</item>
+        <item>gemischt</item>
+    </string-array>
+
+    <string-array name="display_wind_type_text">
+        <item>Pfeil</item>
+        <item>Beaufort</item>
+        <item>Text</item>
+    </string-array>
+
+    <string-array name="display_wind_unit_text">
+        <item>m/s</item>
+        <item>km/h</item>
+        <item>Beaufort (bf)</item>
+        <item>Knoten (kn)</item>
+    </string-array>
+
+    <string-array name="display_distance_unit_text">
+        <item>metrisch (km, m)</item>
+        <item>nautisch (nautische Meilen)</item>
+        <item>imperial (Meilen, Yards)</item>
+    </string-array>
+
+    <string-array name="display_wind_arc_period_text">
+        <item>nächste 6 Stunden</item>
+        <item>nächste 12 Stunden</item>
+        <item>nächste 24 Stunden</item>
+    </string-array>
+
+    <string-array name="display_wind_arc_period_values">
+        <item>6</item>
+        <item>12</item>
+        <item>24</item>
+    </string-array>
+
+    <string-array name="viewmodel_text">
+        <item>einfach</item>
+        <item>detailliert</item>
+    </string-array>
+
+    <string-array name="display_notifySeverity_text">
+        <item>Wetterwarnung</item>
+        <item>markante Warnung</item>
+        <item>Unwetterwarnung</item>
+        <item>extreme Unwetterwarnung</item>
+    </string-array>
+
+    <string-array name="display_rotation_text">
+        <item>Gerätedrehung</item>
+        <item>Hochkant</item>
+        <item>Waagerecht</item>
+    </string-array>
+
+    <string-array name="theme_text">
+        <item>Dunkel</item>
+        <item>Hell</item>
+        <item>Solarized dunkel</item>
+        <item>Solarized hell</item>
+        <item>automatisch (basierend auf den Geräteeinstellungen)</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ This file is part of TinyWeatherForecastGermany.
+
+ Copyright (c) 2020, 2021 Pawel Dube
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:installLocation="internalOnly"
+          package="de.kaffeemitkoffein.tinyweatherforecastgermany">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
+                 android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher" android:supportsRtl="false">
+        <activity android:name=".MainActivity"
+                  android:screenOrientation="locked"
+                  android:theme="@style/AppTheme_SolarizedDark"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="geo"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts"
+                       android:resource="@xml/shortcuts" />
+        </activity>
+        <activity android:name=".WeatherWarningActivity"
+                  android:label="@string/title_activity_warnings"
+                  android:screenOrientation="locked"
+                  android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+                android:name=".LoggingActivity"
+                android:label="@string/logging_title"
+                android:screenOrientation="locked"
+                android:parentActivityName=".Settings">
+        </activity>
+        <activity
+                android:name=".WelcomeActivity"
+                android:screenOrientation="locked">
+        </activity>
+        <activity android:name=".Settings"
+                  android:label="@string/title_activity_settings"
+                  android:screenOrientation="locked"
+                  android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".LicenseInfo"
+                  android:label="@string/app_name"
+                  android:screenOrientation="locked"
+                  android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".TextForecastListActivity"
+                  android:label="@string/title_activity_textlist"
+                  android:screenOrientation="locked"
+                  android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".TextForecastViewActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="locked"
+                  android:parentActivityName=".TextForecastListActivity">
+        </activity>
+        <activity android:name=".WeatherDetailsActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="locked"
+                  android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".WeatherLayersActivity"
+                  android:label="@string/app_name"
+                  android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".WeatherLayerMapActivity"
+                  android:label="@string/app_name"
+                  android:parentActivityName=".WeatherLayersActivity">
+        </activity>
+
+        <provider android:name=".WeatherContentProvider"
+                  android:authorities="de.kaffeemitkoffein.tinyweatherforecastgermany" android:enabled="true"
+                  android:exported="false" android:grantUriPermissions="false" android:multiprocess="false"
+                  android:syncable="false" />
+
+        <receiver android:name="de.kaffeemitkoffein.tinyweatherforecastgermany.ClassicWidget" android:icon="@drawable/widget_preview"
+                  android:label="@string/classicwidget_description">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/classicwidget"></meta-data>
+        </receiver>
+
+        <receiver android:name="de.kaffeemitkoffein.tinyweatherforecastgermany.LargeWidget" android:icon="@drawable/widget_preview_large"
+                  android:label="@string/largewidget_description">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/largewidget" />
+        </receiver>
+
+        <receiver android:name="de.kaffeemitkoffein.tinyweatherforecastgermany.BoldWidget" android:icon="@drawable/widget_preview_bold"
+                  android:label="@string/boldwidget_description">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/boldwidget" />
+        </receiver>
+
+        <receiver android:name="de.kaffeemitkoffein.tinyweatherforecastgermany.ClockWidget" android:icon="@drawable/widget_preview_clock"
+                  android:label="@string/clockwidget_description">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/clockwidget"/>
+        </receiver>
+
+        <receiver android:name="de.kaffeemitkoffein.tinyweatherforecastgermany.ChartWidget" android:icon="@drawable/widget_preview_chart"
+                  android:label="@string/preference_display_overviewchart_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/chartwidget" />
+        </receiver>
+
+        <receiver android:name=".WeatherUpdateBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="de.kaffeemitkoffein.broadcast.REQUEST_UPDATE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".AlarmClockUpdatedReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".OnBootCompletedReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".CancelNotificationBroadcastReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="de.kaffeemitkoffein.broadcast.CANCEL_NOTIFICATIONS"/>
+                <action android:name="de.kaffeemitkoffein.broadcast.CLEAR_NOTIFICATIONS"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".DataUpdateService" android:enabled="true" android:exported="false" />
+        <service android:name=".UpdateJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE" />
+    </application>
+
+</manifest>

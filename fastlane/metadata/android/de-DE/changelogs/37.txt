@@ -1,0 +1,5 @@
+- schnellerer Start der App
+- Niederschlagsmenge wird ausgeblendet, wenn sie null ist
+- verbesserte Übersetzungen
+- 6-stündige Updates werden besser mit den Mosmix-Daten-Updates synchronisiert
+- kleinere Verbesserungen in der Wetteranzeige

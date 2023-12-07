@@ -1,0 +1,5 @@
+- fixed missing update of warnings in main app
+- fixed date parsing errors in text forecasts
+- fixed font too big in large widget
+- bold widget now again stretches information to maximum width available
+- weather warnings scroll faster now

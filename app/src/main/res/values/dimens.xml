@@ -1,0 +1,109 @@
+<!--
+ This file is part of TinyWeatherForecastGermany.
+
+ Copyright (c) 2020, 2021 Pawel Dube
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+
+<resources>
+    <dimen name="widget_textsize_double">24sp</dimen>
+    <dimen name="widget_textsize_verylarge">18sp</dimen>
+    <dimen name="widget_textsize_large">14sp</dimen>
+    <dimen name="widget_textsize_medium">12sp</dimen>
+    <dimen name="widget_textsize_small">7sp</dimen>
+
+    <dimen name="widget_textsize_fc_day">10sp</dimen>
+    <dimen name="widget_textsize_fc_temperature">10sp</dimen>
+    <dimen name="widget_textsize_clock">64sp</dimen>
+    <dimen name="widget_weathericon_size">64sp</dimen>
+    <dimen name="widget_weathericon_medium">40sp</dimen>
+
+    <dimen name="fcmain_fciconsize">105sp</dimen>
+    <dimen name="fcmain_textsize_xxl">58sp</dimen>
+    <dimen name="fcmain_textsize_xl">28sp</dimen>
+    <dimen name="fcmain_textsize_xl_half">14sp</dimen>
+    <dimen name="fcmain_textsize_large">18sp</dimen>
+    <dimen name="fcmain_textsize_large_fixed">18dp</dimen>
+    <dimen name="fcmain_textsize_medium">12sp</dimen>
+    <dimen name="fcmain_textsize_medium_fixed">12dp</dimen>
+    <dimen name="fcmain_textsize_smaller">10sp</dimen>
+    <dimen name="fcmain_textsize_small">7sp</dimen>
+
+    <dimen name="fcmain_mediumdevice_fciconsize">100sp</dimen>
+    <dimen name="fcmain_mediumdevice_textsize_xxl">48sp</dimen>
+    <dimen name="fcmain_mediumdevice_textsize_xl">24sp</dimen>
+    <dimen name="fcmain_mediumdevice_textsize_xl_half">12sp</dimen>
+    <dimen name="fcmain_mediumdevice_textsize_large">16sp</dimen>
+    <dimen name="fcmain_mediumdevice_textsize_large_fixed">16dp</dimen>
+    <dimen name="fcmain_mediumdevice_textsize_medium">11sp</dimen>
+    <dimen name="fcmain_mediumdevice_textsize_medium_reduced">9sp</dimen>
+    <dimen name="fcmain_mediumdevice_textsize_small">6sp</dimen>
+
+    <dimen name="fcmain_narrowdevice_fciconsize">80sp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_xxl">32sp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_xl">16sp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_xl_fixed">16dp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_xl_half">8sp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_large">14sp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_large_fixed">14dp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_medium">10sp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_medium_reduced">8sp</dimen>
+    <dimen name="fcmain_narrowdevice_textsize_small">6sp</dimen>
+
+    <dimen name="licence_textsize">10sp</dimen>
+    <dimen name="about_textsize">12sp</dimen>
+    <dimen name="whatsnew_textsize">16sp</dimen>
+
+    <dimen name="warning_large">14sp</dimen>
+    <dimen name="warning_medium">12sp</dimen>
+    <dimen name="warning_small">10sp</dimen>
+    <dimen name="warning_ip">3dp</dimen>
+
+    <dimen name="warning_note_padding">8dp</dimen>
+
+    <dimen name="welcome_icon_size">36dp</dimen>
+    <dimen name="welcome_action_size">24sp</dimen>
+    <dimen name="welcome_setup_size">20sp</dimen>
+    <dimen name="welcome_text_size">16sp</dimen>
+    <dimen name="welcome_icondesc_size">16dp</dimen>
+    <dimen name="welcome_icondesc_padding">0dp</dimen>
+    <dimen name="welcome_icontext_padding">16dp</dimen>
+    <dimen name="welcome_text_padding">6dp</dimen>
+    <dimen name="welcome_action_padding">24dp</dimen>
+    <dimen name="welcome_line_height">28dp</dimen>
+
+    <dimen name="geo_textsize_very_huge">48sp</dimen>
+    <dimen name="geo_textsize_huge">24sp</dimen>
+    <dimen name="geo_textsize_large">16sp</dimen>
+    <dimen name="geo_textsize_medium">14sp</dimen>
+    <dimen name="geo_textsize_small">12sp</dimen>
+
+    <dimen name="reader_textsize_title">24sp</dimen>
+    <dimen name="reader_textsize_date">14sp</dimen>
+    <dimen name="reader_textsize_subtitle">16sp</dimen>
+    <dimen name="reader_textsize_body">14sp</dimen>
+
+    <dimen name="widget_padding">2dp</dimen>
+    <dimen name="widget_margin">2dp</dimen>
+    <dimen name="widget_radius">8dp</dimen>
+
+    <dimen name="slider_margin">2dp</dimen>
+    <dimen name="slider_marginDouble">4dp</dimen>
+
+    <dimen name="forcecastadapterPadding">4dp</dimen>
+    <dimen name="forcecastadapterPaddingDouble">8dp</dimen>
+
+</resources>

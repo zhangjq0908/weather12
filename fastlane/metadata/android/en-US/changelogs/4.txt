@@ -1,0 +1,18 @@
+Version 0.31:
+- App crash on first launch (when no old weather data is present)
+- "What's new" now also appears after first installation
+
+Version 0.30:
+- added an option to regularly download weather data in custom intervals, this can be enabled and disabled in the settings
+- added visible last update time in main app
+- app and widget now display wind direction
+- fixed wind data losing direction information
+- fixed parsing error of FDAT data field (part of sensor ID)
+- fixed broken default value for update interval
+- fixed update bug causing updates to take place very rarely
+- gadgetbridge support: fixed unix timestamp filled with garbage
+- gadgetbridge support: fixed wind direction always 0°
+- gadgetbridge support: fixed temperature sent in celsius instead of kelvin
+- gadgetbridge support: fixed supplied weather conditions were not always compatible with the lineageos standard
+- gadgetbridge support: fixed current weather condition now displays current condition instead of day forecast
+- gadgetbridge support is still in a beta, but should work!

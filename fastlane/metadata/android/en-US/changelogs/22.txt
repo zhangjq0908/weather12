@@ -1,0 +1,7 @@
+- new language: Dutch (thanks to Mondstern!)
+- updated list of weather stations / locations
+- several bug-fixes, some of them potentially leading to an app crash
+- fixed too large font size of the weekday in the large widget
+- fixed wrong day labeling in large widget & bold widget
+- fixed forecast items overlapping in the main app on some devices
+

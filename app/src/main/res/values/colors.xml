@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ This file is part of TinyWeatherForecastGermany.
+
+ Copyright (c) 2020, 2021 Pawel Dube
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <color name="colorPrimary_DarkTheme">#202020</color>
+    <color name="colorPrimaryDark_DarkTheme">#000000</color>
+    <color name="colorPrimaryLight_DarkTheme">#464646</color>
+    <color name="colorAccent_DarkTheme">#03DAC5</color>
+    <color name="colorText_DarkTheme">#eeeeee</color>
+    <color name="colorTextDark_DarkTheme">#999999</color>
+    <color name="colorTextLight_DarkTheme">#ffffff</color>
+    <color name="colorWelcomeBackground_DarkTheme">#2222ff</color>
+    <color name="colorWidgetBackground_DarkTheme">#464646</color>
+    <color name="colorSecondary_DarkTheme">#1aad4e</color>
+    <color name="colorChartTemperatureCold_DarkTheme">#960d0d</color>
+    <color name="colorChartTemperatureWarm_DarkTheme">#157cc8</color>
+
+    <color name="colorPrimary_LightTheme">#dddddd</color>
+    <color name="colorPrimaryDark_LightTheme">#bbbbbb</color>
+    <color name="colorPrimaryLight_LightTheme">#eeeeee</color>
+    <color name="colorAccent_LightTheme">#085758</color>
+    <color name="colorText_LightTheme">#111111</color>
+    <color name="colorTextDark_LightTheme">#333333</color>
+    <color name="colorTextLight_LightTheme">#000000</color>
+    <color name="colorWelcomeBackground_LightTheme">#04a3f6</color>
+    <color name="colorWidgetBackground_LightTheme">#eeeeee</color>
+    <color name="colorSecondary_LightTheme">#04a3f6</color>
+    <color name="colorChartTemperatureCold_LightTheme">#f8c41c</color>
+    <color name="colorChartTemperatureWarm_LightTheme">#889ff8</color>
+
+    <color name="colorPrimary_Solarized">#eee8d5</color>               <!-- base2 -->
+    <color name="colorPrimaryDark_Solarized">#eee8d5</color>           <!-- base2 -->
+    <color name="colorPrimaryLight_Solarized">#fdf6e3</color>          <!-- base3 -->
+    <color name="colorAccent_Solarized">#2aa198</color>                <!-- cyan  -->
+    <color name="colorText_Solarized">#586e75</color>                  <!-- base01 -->
+    <color name="colorTextDark_Solarized">#657b83</color>              <!-- base00 -->
+    <color name="colorTextLight_Solarized">#839496</color>             <!-- base0  -->
+    <color name="colorWelcomeBackground_Solarized">#fdf6e3</color>     <!-- base3 -->
+    <color name="colorWidgetBackground_Solarized">#fdf6e3</color>      <!-- base3 -->
+    <color name="colorSecondary_Solarized">#268bd2</color>             <!-- blue -->
+    <color name="colorAccentYellow_Solarized">#b58900</color>
+    <color name="colorAccentOrange_Solarized">#cb4b16</color>
+    <color name="colorAccentRed_Solarized">#dc322f</color>
+    <color name="colorAccentMagenta_Solarized">#d33682</color>
+    <color name="colorAccentViolet_Solarized">#6c71c4</color>
+    <color name="colorAccentBlue_Solarized">#268bd2</color>
+    <color name="colorAccentCyan_Solarized">#2aa198</color>
+    <color name="colorAccentGreen_Solarized">#859900</color>
+
+    <color name="colorPrimary_SolarizedDark">#002b36</color>                     <!-- base03 -->
+    <color name="colorPrimaryDark_SolarizedDark">#002b36</color>                 <!-- base03 -->
+    <color name="colorPrimaryLight_SolarizedDark">#073642</color>                <!-- base02 -->
+    <color name="colorAccent_SolarizedDark">#2aa198</color>                      <!-- cyan -->
+    <color name="colorText_SolarizedDark">#839496</color>                        <!-- base0 -->
+    <color name="colorTextDark_SolarizedDark">#657b83</color>                    <!-- base00 -->
+    <color name="colorTextLight_SolarizedDark">#93a1a1</color>                   <!-- base1 -->
+    <color name="colorWelcomeBackground_SolarizedDark">#073642</color>           <!-- base02 -->
+    <color name="colorWidgetBackground_SolarizedDark">#073642</color>            <!-- base02 -->
+    <color name="colorSecondary_SolarizedDark">#268bd2</color>                   <!-- blue -->
+    <color name="colorChartTemperatureCold_SolarizedDark">#f8c41c</color>
+    <color name="colorChartTemperatureWarm_SolarizedDark">#889ff8</color>
+    <color name="colorWarning_clear">#00cc00</color>
+    <color name="colorWarning_minor">#eeee00</color>
+    <color name="colorWarning_moderate">#ee6600</color>
+    <color name="colorWarning_severe">#ee0000</color>
+
+    <color name="fcitem_rain">#2222aa</color>
+    <color name="fcitem_clouds">#aaaaaa</color>
+
+    <color name="colorTextWidget">@color/colorText_DarkTheme</color>
+
+</resources>
